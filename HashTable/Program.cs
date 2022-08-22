@@ -28,7 +28,7 @@ namespace HashTable
 
             ///UC_2:Find the frequency of word in paragraph
             string Paragraph = "“Paranoids are not paranoid because they are " +
-               "paranoid paranoid paranoid but because they keep putting themselves deliberately into" +
+               "paranoid but because they keep putting themselves deliberately into" +
                " paranoid avoidable situations";
             string[] letters = Paragraph.ToLower().Split(" ");
 
@@ -45,7 +45,12 @@ namespace HashTable
             int frequency1 = LinkedHashMap.Get("paranoid");
             Console.WriteLine(frequency1);
 
+            //UC_3:Remove particular word from the paragraph
 
+            LinkedHashMap.Remove("avoidable");
+            int frequency2 = LinkedHashMap.Get("avoidable");
+
+            Console.WriteLine(frequency2);
         }
     }
 }

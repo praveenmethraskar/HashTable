@@ -45,6 +45,11 @@ namespace HashTable
             return index;                                   //6.6       //5.5 In This case index is 3
         }
 
+        internal void Remove(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Add(K key, V value)                                 //6.1 For Adding the particular value and key at linked list 
         {
             //Adding the particular value and key at linked list 
