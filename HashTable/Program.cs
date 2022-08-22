@@ -6,10 +6,10 @@ namespace HashTable
     {
         static void Main(string[] args)
         {
-           
-            //UC1:Find the frequency of word in sentence
-        
-            Console.WriteLine("To be or not To be To be To be");
+            ///<summary
+            ///UC1:Find the frequency of word in sentence
+            /// </summary>
+            Console.WriteLine("Welcome to Data Structure Problem Using Generics");
             LinkedHashMap<string, int> LinkedHashMap = new LinkedHashMap<string, int>(5);  ///1 Creating Linklist Hashmap 
             string sentence = "to be or not to be";                                        ///2
             string[] words = sentence.ToLower().Split(" ");                                ///3 Created the array and Splitting The Sentances, 
@@ -26,7 +26,26 @@ namespace HashTable
             int frequency = LinkedHashMap.Get("to");
             Console.WriteLine(frequency);
 
- 
+            ///UC_2:Find the frequency of word in paragraph
+            string Paragraph = "“Paranoids are not paranoid because they are " +
+               "paranoid paranoid paranoid but because they keep putting themselves deliberately into" +
+               " paranoid avoidable situations";
+            string[] letters = Paragraph.ToLower().Split(" ");
+
+            foreach (string word in letters)
+            {
+                int value = LinkedHashMap.Get(word);
+                if (value == default)
+                {
+                    value = 1;
+                }
+                else value += 1;
+                LinkedHashMap.Add(word, value);
+            }
+            int frequency1 = LinkedHashMap.Get("paranoid");
+            Console.WriteLine(frequency1);
+
+
         }
     }
 }
